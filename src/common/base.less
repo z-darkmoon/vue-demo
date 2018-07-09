@@ -1,0 +1,132 @@
+.px2rem(@name, @px){
+    @{name}: unit(@px / 100, rem);
+}
+.multiPx2rem(@name, @top, @right, @bottom, @left) {
+    @{name}-top: unit(@top / 100, rem);
+    @{name}-right: unit(@right / 100, rem);
+    @{name}-bottom: unit(@bottom / 100, rem);
+    @{name}-left: unit(@left / 100, rem);
+}
+
+.pxAll2rem(@name,@px,@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+      @{name}:unit(@px/100/(1708 - 2 * @reducePx)*1708,rem);
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+      @{name}:unit(@px/100/(1708 - @reducePx)*1708,rem);
+    }
+    @media (min-width:  unit((1708 - @reducePx),px)) {
+        @{name}: unit(@px / 100, rem);
+    }
+  }
+}
+.pxAll4rem(@name,@px,@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+        @{name}:unit(@px/100/(1460 - 2 * @reducePx)*1460,rem);
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+        @{name}:unit(@px/100/(1460 - @reducePx)*1460,rem);
+    }
+    @media (min-width:  unit((1708 - @reducePx),px)) {
+        @{name}: unit(@px / 100, rem);
+    }
+  }
+}
+//搜索页
+.pxAll3rem(@name,@px,@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+        @{name}:unit(@px/100/(1708 - 2 * @reducePx)*1708,rem);
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) ) and (min-width: unit((1708 - 2*@reducePx - 1),px)) {
+        @{name}:unit(@px/100/(1210 - @reducePx)*1210,rem);
+    }
+    @media (min-width:  unit((1708 - @reducePx),px)) {
+        @{name}: unit(@px / 100, rem);
+    }
+  }
+}
+.hideItem(@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+      &:nth-child(7n-3), &:nth-child(7n){
+        display: none;
+      }
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+      &:nth-child(7n-3){
+        display: none;
+      }
+    }
+  }
+}
+.hideHomeItem(@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+      &:nth-child(7n-4), &:nth-child(7n-5){
+        display: none !important;
+      }
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+      &:nth-child(7n-5){
+        display: none !important;
+      }
+    }
+  }
+}
+.hideHome7Item(@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+      &:nth-child(7n), &:nth-child(7n-1){
+        display: none !important;
+      }
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+      &:nth-child(7n){
+        display: none !important;
+      }
+    }
+  }
+}
+.hideHome6Item(@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+      &:nth-child(6n), &:nth-child(6n-1){
+        display: none !important;
+      }
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+      &:nth-child(6n){
+        display: none !important;
+      }
+    }
+  }
+}
+.hideHome5Item(@reducePx){
+  @media screen{
+    @media(max-width: unit((1708 - 2*@reducePx - 1),px) ){
+      &:nth-child(5n), &:nth-child(5n-1){
+        display: none !important;
+      }
+    }
+    @media (max-width: unit((1708 - @reducePx - 1),px) )  and (min-width:unit((1708 - 2*@reducePx),px)){
+      &:nth-child(5n){
+        display: none !important;
+      }
+    }
+  }
+}
+.hideSearchItem(@reducePx){
+  @media screen{
+    @media (max-width: unit((1708 - @reducePx - 1),px) ){
+      &:nth-child(n+24){
+        display: none;
+      }
+     &.more_than,&.equal_flag{
+       display: inline-block !important;
+     }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "./common/normalize.less";
+@import "./common/common.less";
+@import "./common/nano.less";
+@import "./common/base.less";
+@import "./common/variable.less";
+
+#app{
+    #toTop{
+        position: fixed;
+        z-index: 999;
+        width: 0.4rem;
+        height: 0.4rem;
+        bottom: 0.5rem;
+        right: 0.18rem;
+        cursor: pointer;
+        background: url('../static/img/totop_icon.png') no-repeat center;
+        background-size: contain;
+      }
+      #toTop:hover{
+        background: url('../static/img/totop_icon_hover.png') no-repeat center;
+        background-size: contain;
+      }
+      .totop-img{
+          width: 0.23rem;
+          height: 0.23rem;
+      }
+      
+}

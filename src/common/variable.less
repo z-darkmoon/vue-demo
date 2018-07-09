@@ -1,0 +1,40 @@
+@listItemMargin: .2rem;
+@listItemMarginBottom: .15rem;
+@listItemWidth: 2.08rem; //每一个的宽度
+@listItemWidthBox: @listItemWidth + @listItemMargin;
+@xsListLength: 4;
+@smListLength: 5;
+@mdListLength: 6;
+@pageXsWidth: @listItemWidthBox * @xsListLength - @listItemMargin;
+@pageSmWidth: @listItemWidthBox * @smListLength - @listItemMargin;
+@pageMdWidth: @listItemWidthBox * @mdListLength - @listItemMargin;
+
+@screen-sm-min: 610px;
+@screen-md-min: 738px;
+@screen-lg-min: 910px;
+
+@navbarHeight: 1rem;
+@footerHeight: .6rem;
+
+@textHeavy: #333;
+@textMiddle: #60606d;
+@textSmall: #999;
+@textLight: #fff;
+
+
+@borderColor: #eaeef1;
+
+@bgColor: #4cb6cb;
+
+@colorPrimary: #545ca6;
+@colorInfo: #4cb6cb;
+@colorSuccess: #1ab667;
+@colorWarning: #fad733;
+@colorDanger: #f05050;
+@colorDark: #5a6a7a;
+
+@100rem: 100rem;
+
+.px2rem(@name, @px){
+    @{name}: unit(@px / 100, rem);
+}

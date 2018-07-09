@@ -1,0 +1,25 @@
+@import "./base.less";
+html, body, .wrapper {
+  width: 100%;
+  background: #1a1a1a;
+  min-width:1000px;
+  //height: 100%;
+  //overflow: hidden;
+  //height: 100%;
+//overflow: hidden;
+}
+#app{
+  .px2rem(width, 1708);
+  margin: 0 auto;
+}
+.clearfix::after{
+  content:"";
+  overflow:hidden;
+  clear:both;
+  display:block;
+  height:0;
+  visibility:hidden;
+}
+::-webkit-scrollbar {/*隐藏滚轮*/
+  display: none;
+}
